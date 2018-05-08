@@ -13,7 +13,7 @@ steps:
     - export HELM_REPO_URL=http://chartmuseum-dev.codefresh.io
     - cf_export HELM_REPO_FULL_PATH=$HELM_REPO_URL/api/charts
     - cf_export HELM_REPO_URL=$HELM_REPO_URL
-    - cf_export TEMP_BRANCH_NAME=${{TEMP_BRANCH_NAME}}-${{CF_BRANCH_TAG_NORMALIZED}}-${{CF_REVISION}}
+    - cf_export TEMP_BRANCH_NAME=${{SERVICE_NAME}}-${{CF_BRANCH_TAG_NORMALIZED}}-${{CF_REVISION}}
 
 
   build_helm_package_for_commit:
